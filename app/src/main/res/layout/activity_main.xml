@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/iv_flag"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -28,7 +28,7 @@
         android:text="@string/main_text"
         android:textColor="@color/white"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/btn_account"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -40,7 +40,7 @@
         android:text="@string/car_health"
         android:textColor="@color/white"
         android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/imageView5"
+        app:layout_constraintStart_toEndOf="@+id/iv_accept1"
         app:layout_constraintTop_toBottomOf="@+id/centerTextMain" />
 
     <TextView
@@ -50,7 +50,7 @@
         android:text="@string/request"
         android:textColor="@color/white"
         android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/imageView6"
+        app:layout_constraintStart_toEndOf="@+id/iv_accept2"
         app:layout_constraintTop_toBottomOf="@+id/tv_line1" />
 
     <TextView
@@ -60,15 +60,13 @@
         android:text="@string/policy"
         android:textColor="@color/white"
         android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/imageView7"
+        app:layout_constraintStart_toEndOf="@+id/iv_accept3"
         app:layout_constraintTop_toBottomOf="@+id/tv_line2" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="0dp"
+        android:id="@+id/btn_account"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
         android:layout_marginBottom="64dp"
         android:backgroundTint="@color/green_flag"
         android:fontFamily="sans-serif"
@@ -78,10 +76,11 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:onClick="launchSecondActivity"/>
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/iv_accept1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="@+id/centerTextMain"
@@ -89,19 +88,19 @@
         app:srcCompat="@drawable/ic_tick2x" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/iv_accept2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="@+id/centerTextMain"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        app:layout_constraintTop_toBottomOf="@+id/iv_accept1"
         app:srcCompat="@drawable/ic_tick2x" />
 
     <ImageView
-        android:id="@+id/imageView7"
+        android:id="@+id/iv_accept3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="@+id/centerTextMain"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6"
+        app:layout_constraintTop_toBottomOf="@+id/iv_accept2"
         app:srcCompat="@drawable/ic_tick2x" />
 
     <androidx.constraintlayout.widget.Barrier
@@ -109,7 +108,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:barrierDirection="end"
-        app:constraint_referenced_ids="imageView5,imageView6,imageView7"
+        app:constraint_referenced_ids="iv_accept1,iv_accept2,iv_accept3"
         tools:layout_editor_absoluteX="411dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

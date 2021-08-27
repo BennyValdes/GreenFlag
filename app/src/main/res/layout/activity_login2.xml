@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,20 +8,130 @@
     android:background="@color/black"
     tools:context=".LoginActivity2">
 
+    <ImageButton
+        android:id="@+id/image_button_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:backgroundTint="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/header_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="?attr/actionModeCloseDrawable"
+        app:tint="@color/green_flag" />
+
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/header_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/create_account"
         android:textColor="@color/white"
-        tools:layout_editor_absoluteX="207dp"
-        tools:layout_editor_absoluteY="55dp" />
-    <Button
-        android:id="@+id/button"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/image_button_back"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/header_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="@string/email_address"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_title"
+        app:layout_constraintBottom_toTopOf="@+id/et_email" />
+
+    <EditText
+        android:id="@+id/et_email"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:background="@color/white"
+        android:text=""
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_email"
+        app:layout_constraintBottom_toTopOf="@+id/header_password"
+        app:layout_constraintVertical_bias="0.30"
+        android:textSize="25dp"/>
+
+    <TextView
+        android:id="@+id/header_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="@string/create_password"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_email"
+        app:layout_constraintBottom_toTopOf="@+id/et_password"
+        app:layout_constraintVertical_bias="0.45" />
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:background="@color/white"
+        android:hint="@string/criteria_below"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_password"
+        app:layout_constraintBottom_toTopOf="@+id/header_password2"
+        app:layout_constraintVertical_bias="0.60"
+        android:textSize="25dp"/>
+
+    <TextView
+        android:id="@+id/header_password2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="@string/repeat_password"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_password"
+        app:layout_constraintBottom_toTopOf="@+id/et_password2"
+        app:layout_constraintVertical_bias="0.75" />
+
+    <EditText
+        android:id="@+id/et_password2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:background="@color/white"
+        android:text=""
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_password2"
+        app:layout_constraintBottom_toTopOf="@+id/tv_description"
+        app:layout_constraintVertical_bias="0.90"
+        android:textSize="25dp"/>
+
+    <TextView
+        android:id="@+id/tv_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/password_text"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/bt_next"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="15dp"/>
+
+    <Button
+        android:id="@+id/bt_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="64dp"
         android:backgroundTint="@color/green_flag"
         android:fontFamily="sans-serif"
@@ -30,15 +141,7 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:onClick="create_an_account"/>
 
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/black"
-        android:tint="@color/green_flag"
-        app:srcCompat="?attr/actionModeCloseDrawable"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="30dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
