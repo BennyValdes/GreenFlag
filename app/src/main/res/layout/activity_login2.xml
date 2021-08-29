@@ -53,7 +53,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/header_email"
-        app:layout_constraintBottom_toTopOf="@+id/header_password"/>
+        app:layout_constraintBottom_toTopOf="@+id/tv_bad_email"/>
+    <ImageView
+        android:id="@+id/iv_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_tick2x"
+        app:layout_constraintTop_toTopOf="@id/et_email"
+        app:layout_constraintBottom_toBottomOf="@id/et_email"
+        app:layout_constraintEnd_toEndOf="@id/et_email"
+        android:visibility="invisible"/>
     <TextView
         android:id="@+id/tv_bad_email"
         android:layout_width="match_parent"
@@ -61,7 +70,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/fail_black"
-        android:text="@string/password_match_not"
+        android:text="@string/no_email_format"
         android:textSize="16dp"
         android:textColor="@color/white"
         android:textAlignment="center"
@@ -81,7 +90,7 @@
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_email"
+        app:layout_constraintTop_toBottomOf="@+id/tv_bad_email"
         app:layout_constraintBottom_toTopOf="@+id/et_password"/>
     <EditText
         android:id="@+id/et_password"
@@ -95,7 +104,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/header_password"
-        app:layout_constraintBottom_toTopOf="@+id/header_password2"/>
+        app:layout_constraintBottom_toTopOf="@+id/tv_bad_password1"/>
+    <ImageView
+        android:id="@+id/iv_password1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_tick2x"
+        app:layout_constraintTop_toTopOf="@id/et_password"
+        app:layout_constraintBottom_toBottomOf="@id/et_password"
+        app:layout_constraintEnd_toEndOf="@id/et_password"
+        android:visibility="invisible"/>
     <TextView
         android:id="@+id/tv_bad_password1"
         android:layout_width="match_parent"
@@ -123,7 +141,7 @@
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_password"
+        app:layout_constraintTop_toBottomOf="@+id/tv_bad_password1"
         app:layout_constraintBottom_toTopOf="@+id/et_password2"/>
     <EditText
         android:id="@+id/et_password2"
@@ -137,7 +155,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/header_password2"
-        app:layout_constraintBottom_toTopOf="@+id/tv_description"/>
+        app:layout_constraintBottom_toTopOf="@+id/tv_bad_password2"/>
+    <ImageView
+        android:id="@+id/iv_password2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_tick2x"
+        app:layout_constraintTop_toTopOf="@id/et_password2"
+        app:layout_constraintBottom_toBottomOf="@id/et_password2"
+        app:layout_constraintEnd_toEndOf="@id/et_password2"
+        android:visibility="invisible"/>
     <TextView
         android:id="@+id/tv_bad_password2"
         android:layout_width="match_parent"
@@ -168,7 +195,7 @@
         android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/et_password2"
+        app:layout_constraintTop_toBottomOf="@id/tv_bad_password2"
         app:layout_constraintBottom_toTopOf="@+id/bt_next"/>
 
     <Button
