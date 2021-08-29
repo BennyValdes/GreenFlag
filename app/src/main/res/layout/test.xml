@@ -33,20 +33,13 @@
                 android:gravity="center"
                 android:inputType="textEmailAddress"
                 android:textSize="32dp" />
-            <ImageView
-                android:id="@+id/iv_emailMark"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:src="@drawable/ic_red_x"
-                android:layout_alignEnd="@id/et_input_email"
-                android:layout_alignTop="@id/et_input_email"
-                android:layout_alignBottom="@+id/et_input_email"
-                android:layout_margin="4dp"/>
         </RelativeLayout>
         <LinearLayout
             android:id="@+id/ll_bad_email"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="@drawable/fail_black"
+            android:layout_marginTop="16dp">
             <ImageView
                 android:id="@+id/iv_bad"
                 android:layout_width="35dp"
@@ -58,9 +51,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
-                android:text="BAD EMAIL"
+                android:text="@string/account_exist"
                 android:textColor="@color/white"
-                android:textSize="32dp"/>
+                android:textSize="24dp"/>
         </LinearLayout>
         <RelativeLayout
             android:layout_width="match_parent"
@@ -81,20 +74,13 @@
                 android:gravity="center"
                 android:inputType="textEmailAddress"
                 android:textSize="32dp" />
-            <ImageView
-                android:id="@+id/iv_passwor1Mark"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:src="@drawable/ic_red_x"
-                android:layout_alignEnd="@id/et_input_passwor1"
-                android:layout_alignTop="@id/et_input_passwor1"
-                android:layout_alignBottom="@+id/et_input_passwor1"
-                android:layout_margin="4dp"/>
         </RelativeLayout>
         <LinearLayout
             android:id="@+id/ll_bad_passwor1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="@drawable/fail_black"
+            android:layout_marginTop="16dp">
             <ImageView
                 android:id="@+id/iv_bad1"
                 android:layout_width="35dp"
@@ -106,9 +92,50 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
-                android:text="BAD PASSWORD"
+                android:text="@string/see_criteria"
                 android:textColor="@color/white"
-                android:textSize="32dp"/>
+                android:textSize="24dp"/>
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_passwor2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email Address"
+                android:textSize="20dp"
+                android:textColor="@color/white" />
+            <EditText
+                android:id="@+id/et_input_passwor2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_passwor2"
+                android:background="@drawable/fail"
+                android:gravity="center"
+                android:inputType="textEmailAddress"
+                android:textSize="32dp" />
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/ll_bad_passwor2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/fail_black"
+            android:layout_marginTop="16dp">
+            <ImageView
+                android:id="@+id/iv_bad2"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_margin="4dp"
+                android:src="@drawable/ic_red_x"/>
+            <TextView
+                android:id="@+id/tv_bad_passwor2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:text="@string/password_match_not"
+                android:textColor="@color/white"
+                android:textSize="24dp"/>
         </LinearLayout>
 
     </LinearLayout>

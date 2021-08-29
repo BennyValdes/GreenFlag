@@ -19,7 +19,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="?attr/actionModeCloseDrawable"
         app:tint="@color/green_flag" />
-
     <TextView
         android:id="@+id/header_title"
         android:layout_width="wrap_content"
@@ -42,7 +41,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/header_title"
         app:layout_constraintBottom_toTopOf="@+id/et_email" />
-
     <EditText
         android:id="@+id/et_email"
         android:layout_width="0dp"
@@ -52,11 +50,27 @@
         android:background="@color/white"
         android:text=""
         android:textSize="25dp"
-        app:layout_constraintBottom_toTopOf="@+id/header_password"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/header_email"
-        app:layout_constraintVertical_bias="0.30" />
+        app:layout_constraintBottom_toTopOf="@+id/header_password"/>
+    <TextView
+        android:id="@+id/tv_bad_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/fail_black"
+        android:text="@string/password_match_not"
+        android:textSize="16dp"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_email"
+        app:layout_constraintBottom_toTopOf="@id/header_password"
+        android:visibility="invisible">
+    </TextView>
 
     <TextView
         android:id="@+id/header_password"
@@ -68,8 +82,7 @@
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_email"
-        app:layout_constraintBottom_toTopOf="@+id/et_password"
-        app:layout_constraintVertical_bias="0.45" />
+        app:layout_constraintBottom_toTopOf="@+id/et_password"/>
     <EditText
         android:id="@+id/et_password"
         android:layout_width="0dp"
@@ -78,12 +91,28 @@
         android:layout_marginEnd="32dp"
         android:background="@color/white"
         android:hint="@string/criteria_below"
+        android:textSize="25dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/header_password"
-        app:layout_constraintBottom_toTopOf="@+id/header_password2"
-        app:layout_constraintVertical_bias="0.60"
-        android:textSize="25dp"/>
+        app:layout_constraintBottom_toTopOf="@+id/header_password2"/>
+    <TextView
+        android:id="@+id/tv_bad_password1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/fail_black"
+        android:text="@string/see_criteria"
+        android:textSize="16dp"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_password"
+        app:layout_constraintBottom_toTopOf="@id/header_password2"
+        android:visibility="invisible">
+    </TextView>
 
     <TextView
         android:id="@+id/header_password2"
@@ -95,9 +124,7 @@
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_password"
-        app:layout_constraintBottom_toTopOf="@+id/et_password2"
-        app:layout_constraintVertical_bias="0.75" />
-
+        app:layout_constraintBottom_toTopOf="@+id/et_password2"/>
     <EditText
         android:id="@+id/et_password2"
         android:layout_width="0dp"
@@ -106,12 +133,28 @@
         android:layout_marginEnd="32dp"
         android:background="@color/white"
         android:text=""
+        android:textSize="25dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/header_password2"
+        app:layout_constraintBottom_toTopOf="@+id/tv_description"/>
+    <TextView
+        android:id="@+id/tv_bad_password2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/fail_black"
+        android:text="@string/password_match_not"
+        android:textSize="16dp"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_password2"
         app:layout_constraintBottom_toTopOf="@+id/tv_description"
-        app:layout_constraintVertical_bias="0.90"
-        android:textSize="25dp"/>
+        android:visibility="invisible">
+    </TextView>
 
     <TextView
         android:id="@+id/tv_description"
@@ -121,12 +164,12 @@
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="32dp"
         android:text="@string/password_text"
+        android:textSize="15dp"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/bt_next"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        android:textSize="15dp"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_password2"
+        app:layout_constraintBottom_toTopOf="@+id/bt_next"/>
 
     <Button
         android:id="@+id/bt_next"
@@ -139,9 +182,10 @@
         android:textAllCaps="false"
         android:textColor="@color/black"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_description"
         android:onClick="create_an_account"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

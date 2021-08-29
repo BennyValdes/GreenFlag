@@ -11,4 +11,7 @@
     <string name="repeat_password">Repeat password</string>
     <string name="criteria_below">See criteria below</string>
     <string name="password_text">Your password should have a minimum of 8 characters and contain at least one number, one uppercase and one lower case letter. You can use special characters.</string>
+    <string name="account_exist">An account already exists for this email address</string>
+    <string name="see_criteria">Password incorrect, see password criteria</string>
+    <string name="password_match_not">Your passwords do not match</string>
 </resources>

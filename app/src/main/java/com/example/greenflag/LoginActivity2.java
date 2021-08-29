@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -23,11 +24,19 @@ public class LoginActivity2 extends AppCompatActivity {
 
     public void create_an_account(View view) {
         EditText ed_email, ed_password1, ed_password2;
+        TextView tv_email, tv_password1, tv_password2, tv_inc_email, tv_inc_pass1, tv_inc_pass2;
         String email, pass1, pass2;
 
         ed_email = findViewById(R.id.et_email);
         ed_password1 = findViewById(R.id.et_password);
         ed_password2 = findViewById(R.id.et_password2);
+        tv_email = findViewById(R.id.header_email);
+        tv_password1 = findViewById(R.id.header_password);
+        tv_password2 = findViewById(R.id.header_password2);
+        tv_inc_email = findViewById(R.id.tv_bad_email);
+        tv_inc_pass1 = findViewById(R.id.tv_bad_password1);
+        tv_inc_pass2 = findViewById(R.id.tv_bad_password2);
+
 
         email = ed_email.getText().toString();
         pass1 = ed_password1.getText().toString();
@@ -42,8 +51,10 @@ public class LoginActivity2 extends AppCompatActivity {
             Log.d(TAG, "create_an_account: Valid email address");
             if (pass1.compareTo(pass2) == 0) {
                 Log.d(TAG, "create_an_account: Everything is fine");
-            } else
+            } else {
                 Log.d(TAG, "create_an_account: Passwords don't match");
+                tv_inc_email.setVisibility(View.VISIBLE);
+            }
         } else {
             Log.d(TAG, "create_an_account: Not a valid email address");
         }
